@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/ui/button";
-import { GithubLogo, GoogleLogo } from "@/components/icons/logos";
+import { GithubLogo } from "@/components/icons/logos";
 import { signIn } from "next-auth/react";
 import { DEFAULT_LOGIN_REDIRECT_URL } from "@/routes";
 import { useSearchParams } from "next/navigation";
@@ -10,11 +10,6 @@ import { Loader } from "lucide-react";
 import { toast } from "sonner";
 
 const socialProviders = [
-  {
-    name: "Continue with Google",
-    icon: <GoogleLogo className="h-4 w-4" />,
-    provider: "google",
-  },
   {
     name: "Continue with GitHub",
     icon: <GithubLogo className="h-4 w-4" />,
