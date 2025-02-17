@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/ui/button";
-import { GithubLogo } from "@/components/icons/logos";
+import { PasskeyIcon } from "@/components/icons/logos";
 import { signIn } from "next-auth/react";
 import { DEFAULT_LOGIN_REDIRECT_URL } from "@/routes";
 import { useSearchParams } from "next/navigation";
@@ -11,10 +11,10 @@ import { toast } from "sonner";
 
 const socialProviders = [
   {
-    name: "Continue with GitHub",
-    icon: <GithubLogo className="h-4 w-4" />,
-    provider: "github",
-  },
+    name: "Continue with Passkey",
+    icon: <PasskeyIcon className="h-4 w-4" />,
+    provider: "passkey",
+  }
 ];
 
 const SocialLogin = () => {
